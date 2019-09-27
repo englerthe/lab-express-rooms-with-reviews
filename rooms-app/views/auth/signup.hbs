@@ -1,0 +1,20 @@
+<h2>Signup</h2>
+
+<form id="form" action="/signup" method="POST">
+  <label for="fullname">Full name</label>
+  <input type="text" name="fullname" placeholder="Full name"><br>
+
+  <label for="password">Password</label>
+  <input type="password" name="password" placeholder="********"><br>
+
+  <label for="email">Email</label>
+  <input type="email" name="email" placeholder="firstname.lastname@domain.com"><br>
+
+  <button type="submit">Create account</button>
+</form>
+{{#if errorMessage}}
+<hr>
+<a>{{ errorMessage }}</a>
+{{/if}}
+<hr>
+<a href="/">Back to startpage</a>
