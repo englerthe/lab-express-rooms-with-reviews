@@ -17,10 +17,6 @@
         <button type="submit">Create room</button>
 </form><br>
 <hr>
-{{#if Message}}
-<div>{{Message}}</div>
-{{/if}}
-
 <h3>Edit room</h3>
       <form id="edit-room-form" class="room-form" action="/rooms/edit" method="post">
         <div class="name">
@@ -37,3 +33,18 @@
         </div>
         <button id="send-data">Update</button>
       </form>
+<hr>
+<h3>Delete room</h3>
+<form id="delete-room-form" class="room-form" action="/rooms/delete" method="post">
+      <div class="name">
+        <label for="name">Name: </label>
+        <input type="text" name="name">
+      </div>
+<button id="send-data">Delete</button>
+</form>
+{{#if Message}}
+<hr>
+<div>{{Message}}</div>
+{{/if}}
+<hr>
+<a href="/">Start page</a>

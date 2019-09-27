@@ -1,9 +1,21 @@
 const express = require('express');
 const router  = express.Router();
 const User = require("../models/user-model");
+const Room = require("../models/room-model");
 
 const bcrypt = require("bcryptjs");
 const bcryptSalt = 10;
+
+router.get("/main", (req, res, next) => {
+  Room.find()
+  .then(listofRooms => {
+    console.log(listofRooms);
+    res.render("auth/main", {listofRooms});
+  })
+  .catch(error => {
+    next(error);
+  })
+});
 
 router.get("/signup", (req, res, next) => {
     res.render("auth/signup");

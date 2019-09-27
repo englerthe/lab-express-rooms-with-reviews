@@ -1,0 +1,11 @@
+<a href="/">Back to startpage</a>
+<hr>
+{{#each listofRooms}}
+<h3>{{this.name}}</h3>
+<a href="/rooms"> edit</a>
+<ul>
+<li>{{this.description}}</li>
+<li>{{this.reviews}}</li>
+<img src="{{this.imageUrl}}" alt="TestURL" width="100px">
+</ul>
+{{/each}}
